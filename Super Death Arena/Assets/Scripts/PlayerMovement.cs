@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour //handle player input here
 {
-    [SerializeField] float speed = 0.5f;
+    [SerializeField] public static float speed = 0.2f;
     float xMove;
     float yMove;
     CharacterController character;
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dead = (health / maxHealth) <= 0;
+        dead = (health) <= 0;
         animCont.SetBool("Dead", dead);
         xMove = Input.GetAxis("Horizontal");
         yMove = Input.GetAxis("Vertical");
