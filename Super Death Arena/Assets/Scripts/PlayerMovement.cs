@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float speed = 0.5f;
+    public static float speed = 0.2f;
     float xMove;
     float yMove;
     CharacterController character;
@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dead = (health / maxHealth) <= 0;
+        dead = health <= 0;
         animCont.SetBool("Dead", dead);
         xMove = Input.GetAxis("Horizontal");
         yMove = Input.GetAxis("Vertical");

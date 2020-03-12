@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 113
+  controlID: 71
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -67,8 +67,8 @@ MonoBehaviour:
     y: 0
     width: 680
     height: 1298
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 74}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 259
     height: 785
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 71
+  controlID: 84
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 52
+  controlID: 53
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -264,8 +264,8 @@ MonoBehaviour:
     y: 0
     width: 779
     height: 785
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 224}
+  m_MaxSize: {x: 4004, y: 4024}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -340,20 +340,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Mini Legion Grunt PBR HP Polyart/Prefab
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Mini Legion Grunt PBR HP Polyart/Prefab
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Super-Death-Arena\Super Death Arena
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a4280000
-    m_LastClickedID: 10404
-    m_ExpandedIDs: 0000000044280000462900007e2b0000c42d000000ca9a3b
+    m_SelectedIDs: 16340000
+    m_LastClickedID: 13334
+    m_ExpandedIDs: 000000009833000086340000c43400002237000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -381,7 +381,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000442800007e2b0000
+    m_ExpandedIDs: 0000000098330000c434000022370000ca390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -500,9 +500,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7a3f0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: ce3e0000d43e0000d63e0000d83e0000dc3e0000e23e0000e43e0000e83e0000f63e0000f83e0000083f00000c3f00000e3f00001a3f0000303f0000343f0000363f00003a3f00003e3f0000443f0000463f0000483f00004c3f00004e3f0000583f00005c3f0000603f0000683f0000703f0000
+      m_ExpandedIDs: 8443000086430000884300008c4300008e430000904300009443000096430000984300009c4300009e430000a0430000a4430000aa430000ae430000b2430000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -557,9 +557,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.005147338, y: 0.9498814, z: 0.013808012}
+    m_Target: {x: -0.101935804, y: 0.84575355, z: 0.18311858}
     speed: 2
-    m_Value: {x: -0.005147338, y: 0.9498814, z: 0.013808012}
+    m_Value: {x: -0.101935804, y: 0.84575355, z: 0.18311858}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -591,9 +591,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.054860543, y: 0.94295913, z: -0.19686063, w: 0.26280108}
   m_Size:
-    m_Target: 9.906853
+    m_Target: 11.3547125
     speed: 2
-    m_Value: 9.906853
+    m_Value: 11.3547125
   m_Ortho:
     m_Target: 0
     speed: 2

@@ -34,12 +34,12 @@ public class EnemySpawner : MonoBehaviour
     public void spawnEnemies()
     {
         GameObject currentEnemy;
-        EnemyCollider collider;
+        AI collider;
         for (int i = 0; i < number; i++)
         {
             currentEnemy = Instantiate(enemy, transform);
             enemies.Add(currentEnemy);
-            collider = currentEnemy.GetComponent<EnemyCollider>();
+            collider = currentEnemy.GetComponent<AI>();
             collider.increaseStats(attackSpeed, damage, health, speed);
         }
     }

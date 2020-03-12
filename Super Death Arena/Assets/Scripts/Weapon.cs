@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    float hitStun;
 
-    public float damage = 10;
-    public float damageMulti = 1;
-
-
+    void Update()
+    {
+        if (hitStun > 0)
+        {
+            hitStun -= Time.deltaTime;
+        }
+    }
 
 
     void OnTriggerEnter(Collider col)
@@ -16,9 +20,10 @@ public class Weapon : MonoBehaviour
         Debug.Log("Die Orc");
 
         AI aiRef = col.GetComponent<AI>();
-        if (aiRef != null)
+        if ((col.gameObject.tag == "Weapon") && (hitStun < 0.05) && (aiRef != null))
         {
-            aiRef.HP -= (damage * damageMulti);
+            aiRef.HP -= Player.damage;
+            hitStun = Player.attackSpeed;
         }
         
     }
