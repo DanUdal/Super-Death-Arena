@@ -11,6 +11,8 @@ public class SkillTree : MonoBehaviour
     public static UnityEvent ability1;
     public static UnityEvent ability2;
     public static UnityEvent ability3;
+    [SerializeField] GameObject target;
+    [SerializeField] GameObject piano;
 
     void Start()
     {
@@ -43,5 +45,11 @@ public class SkillTree : MonoBehaviour
         {
             ability3.Invoke();
         }
+    }
+
+    public void throwPiano()
+    {
+        Instantiate(target, new Vector3(0f, 0f, 0f), Quaternion.identity);
+        Instantiate(piano, new Vector3(0f, 0f, 0f), Quaternion.identity);
     }
 }

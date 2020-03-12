@@ -63,10 +63,14 @@
     <Compile Include="Assets\Scripts\AbilityButton.cs" />
     <Compile Include="Assets\Scripts\AbilitySelector.cs" />
     <Compile Include="Assets\Scripts\EnemyCollider.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\ExperienceOrb.cs" />
+    <Compile Include="Assets\Scripts\PianoMove.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SkillTree.cs" />
     <Compile Include="Assets\Scripts\SkillTreeButton.cs" />
+    <Compile Include="Assets\Scripts\TargetMove.cs" />
     <Compile Include="Assets\Scripts\WeaponHitbox.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/Super-Death-Arena/Super Death Arena/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

@@ -55,6 +55,11 @@ public class PlayerMovement : MonoBehaviour //handle player input here
 
         }
 
+        if (Input.GetKeyDown(KeyCode.Joystick1Button7))
+        {
+            //open pause menu with open scene
+        }
+
     }
     //Animation events to prevent looping
     public void endAttack()

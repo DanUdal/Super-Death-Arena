@@ -9,6 +9,8 @@ public class Player : MonoBehaviour //handle player stats and behaviours here
     public static int damage;
     public static List<SkillTree.actives> unlockedActives;
     float hitStun;
+    public static int experience = 0;
+    public static int skillPoints = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +27,14 @@ public class Player : MonoBehaviour //handle player stats and behaviours here
         }
         if (health <= 0)
         {
+            PlayerPrefs.DeleteAll(); //deletes any saved data between menu scenes like skill points
             //end the game here
             //go to death screen
+        }
+        if (experience >= 100)
+        {
+            experience -= 100;
+            skillPoints++;
         }
     }
 

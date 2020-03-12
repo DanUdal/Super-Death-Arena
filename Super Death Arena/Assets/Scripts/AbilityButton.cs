@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class AbilityButton : MonoBehaviour
 {
-    [SerializeField] SkillTree.actives active = SkillTree.actives.piano;
+    [SerializeField] SkillTree.actives active;
+    SkillTree skills;
     public static int ability = 1;
 
     // Start is called before the first frame update
@@ -26,21 +27,27 @@ public class AbilityButton : MonoBehaviour
         {
             switch(active)
             {
-                //add listeners here
+                case SkillTree.actives.piano:
+                    SkillTree.ability1.AddListener(skills.throwPiano);
+                    break;
             }
         }
         if (ability == 2)
         {
             switch (active)
             {
-                //add listeners here
+                case SkillTree.actives.piano:
+                    SkillTree.ability2.AddListener(skills.throwPiano);
+                    break;
             }
         }
         if (ability == 3)
         {
             switch (active)
             {
-                //add listeners here
+                case SkillTree.actives.piano:
+                    SkillTree.ability3.AddListener(skills.throwPiano);
+                    break;
             }
         }
     }

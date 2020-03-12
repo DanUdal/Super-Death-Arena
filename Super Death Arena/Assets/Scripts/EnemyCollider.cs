@@ -6,11 +6,13 @@ public class EnemyCollider : MonoBehaviour
 {
     int health;
     float hitStun;
+    [SerializeField] GameObject experienceOrb;
+    WeaponHitbox weapon;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        weapon = gameObject.GetComponent<WeaponHitbox>();
     }
 
     // Update is called once per frame
@@ -23,6 +25,7 @@ public class EnemyCollider : MonoBehaviour
         if (health <= 0)
         {
             //kill this enemy. put any death animation here
+            Instantiate(experienceOrb, gameObject.transform); //repeat this line of code for each experience orb and change their transform
             Destroy(gameObject);
         }
     }
@@ -36,8 +39,13 @@ public class EnemyCollider : MonoBehaviour
         }
     }
 
-    void takeDamage(int damage)
+    public void takeDamage(int damage)
     {
         health -= damage;
+    }
+
+    public void increaseStats(float bonusAttackSpeed, int bonusDamage, int bonusHealth, float speed)
+    {
+
     }
 }
