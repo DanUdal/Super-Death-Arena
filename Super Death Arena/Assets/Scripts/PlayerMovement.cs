@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour //handle player input here
+public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] public static float speed = 0.2f;
+    [SerializeField] float speed = 0.5f;
     float xMove;
     float yMove;
     CharacterController character;
@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour //handle player input here
     public bool dead;
     public float health = 100;
     public float maxHealth = 100;
+    public Weapon weapon;
 
 
     public Animator animCont;
@@ -22,20 +23,23 @@ public class PlayerMovement : MonoBehaviour //handle player input here
         xMove = 0.0f;
         yMove = 0.0f;
         character = gameObject.GetComponent<CharacterController>();
+
+        weapon.gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        dead = (health) <= 0;
+        dead = (health / maxHealth) <= 0;
         animCont.SetBool("Dead", dead);
         xMove = Input.GetAxis("Horizontal");
         yMove = Input.GetAxis("Vertical");
         Vector3 velocity = new Vector3(xMove, 0.0f, yMove) * speed;
         animCont.SetFloat("Blend", velocity.magnitude);
         character.Move(velocity);
+        weapon.gameObject.GetComponent<BoxCollider>().enabled = animCont.GetBool("Attacking");
 
-        
+
 
 
 
