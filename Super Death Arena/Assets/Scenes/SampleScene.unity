@@ -215,6 +215,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
+  dead: 0
+  health: 100
+  maxHealth: 100
+  animCont: {fileID: 0}
 --- !u!143 &313374026
 CharacterController:
   m_ObjectHideFlags: 0
