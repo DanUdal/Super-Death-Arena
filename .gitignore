@@ -44,3 +44,11 @@ ehthumbs.db
 Corridor/Library/ShaderCache/
 Corridor/Library/metadata/
 *.txt
+/Super Death Arena/Library/*
+/Super Death Arena/Library*
+/Super Death Arena/Library**
+\Super Death Arena\Library*
+\Super Death Arena\Library**
+\Super Death Arena\Library\*
+Super Death Arena/Library/assetDatabase3
+Super Death Arena/Library/assetDatabase3
