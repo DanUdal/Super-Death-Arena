@@ -6,17 +6,25 @@ using UnityEngine.AI;
 
 public class AI : MonoBehaviour
 {
-    public Animator animCont;
-    public PlayerMovement playerRef;
-    public NavMeshAgent agent;
-    public float HP;
-    public bool dead;
+    [SerializeField] Animator animCont;
+    [SerializeField] PlayerMovement playerRef;
+    [SerializeField] NavMeshAgent agent;
+    [SerializeField] public int HP = 10;
+    [SerializeField] float speed = 0.2f;
+    WeaponHitbox weapon;
+    [SerializeField] bool dead;
+    [SerializeField] GameObject experienceOrb;
 
 
-    public float attackThreshold;
-    private bool attacking;
+    [SerializeField] float attackThreshold;
+    bool attacking;
 
-    public Vector3 destination;
+    [SerializeField] Vector3 destination;
+
+    void Start()
+    {
+        weapon = gameObject.GetComponent<WeaponHitbox>();
+    }
 
     void Update()
     {
@@ -25,7 +33,8 @@ public class AI : MonoBehaviour
         animCont.SetBool("Dead", dead);
         agent.enabled = !dead;
         destination = playerRef.gameObject.transform.position;
-        if (agent.enabled = true)
+        agent.speed = speed;
+        if (agent.enabled == true)
         {
             agent.SetDestination(destination);
         }
@@ -36,11 +45,18 @@ public class AI : MonoBehaviour
 
         if (dead)
         {
+            Instantiate(experienceOrb, gameObject.transform);
             Destroy(gameObject, 2f);
         }
 
     }
 
-
+    public void increaseStats(float bonusAttackSpeed, int bonusDamage, int bonusHealth, float bonusSpeed)
+    {
+        HP += bonusHealth;
+        speed *= bonusSpeed;
+        weapon.attackSpeed *= bonusAttackSpeed;
+        weapon.damage += bonusDamage;
+    }
 }
 

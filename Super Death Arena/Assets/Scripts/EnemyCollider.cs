@@ -7,6 +7,8 @@ public class EnemyCollider : MonoBehaviour
     int health;
     float hitStun;
     
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,7 @@ public class EnemyCollider : MonoBehaviour
         if (health <= 0)
         {
             //kill this enemy. put any death animation here
+             //repeat this line of code for each experience orb and change their transform
             Destroy(gameObject);
         }
     }
@@ -36,8 +39,10 @@ public class EnemyCollider : MonoBehaviour
         }
     }
 
-    void takeDamage(int damage)
+    public void takeDamage(int damage)
     {
         health -= damage;
     }
+
+    
 }
