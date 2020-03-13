@@ -8,10 +8,9 @@ public class PlayerMovement : MonoBehaviour
     float xMove;
     float yMove;
     CharacterController character;
+    EnemySpawner waveControl;
 
     public bool dead;
-    public float health = 100;
-    public float maxHealth = 100;
     public Weapon weapon;
 
 
@@ -30,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dead = health <= 0;
+        dead = Player.health <= 0;
         animCont.SetBool("Dead", dead);
         xMove = Input.GetAxis("Horizontal");
         yMove = Input.GetAxis("Vertical");
@@ -38,9 +37,13 @@ public class PlayerMovement : MonoBehaviour
         animCont.SetFloat("Blend", velocity.magnitude);
         character.Move(velocity);
         weapon.gameObject.GetComponent<BoxCollider>().enabled = animCont.GetBool("Attacking");
+        waveControl = GameObject.Find("GameObject").GetComponent<EnemySpawner>();
 
 
-
+        if (velocity != new Vector3(0, 0, 0))
+        {
+            gameObject.transform.rotation = Quaternion.LookRotation(velocity);
+        }
 
 
         // This is for testing purposes. Could easily substitute the actual controllers later
@@ -58,6 +61,12 @@ public class PlayerMovement : MonoBehaviour
             animCont.SetBool("Blocking", true);
 
         }
+
+        if (Input.GetMouseButtonDown(2))
+        {
+            waveControl.spawnEnemies();
+        }
+
 
         if (Input.GetKeyDown(KeyCode.Joystick1Button7))
         {

@@ -28,4 +28,10 @@ public class CoinToss : MonoBehaviour
             StartCoroutine(aiRef.slowEnemy(slowPercent, slowDuration));
         }
     }
+
+    IEnumerator endAbility(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
+    }
 }

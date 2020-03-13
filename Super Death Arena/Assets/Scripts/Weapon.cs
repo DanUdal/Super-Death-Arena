@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    float hitStun;
+    [SerializeField] float hitStun;
+    [SerializeField] float attackSpeed;
+    [SerializeField] int damage;
 
     void Update()
     {
@@ -17,13 +19,14 @@ public class Weapon : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        Debug.Log("Die Orc");
+        
 
-        AI aiRef = col.GetComponent<AI>();
-        if ((col.gameObject.tag == "Weapon") && (hitStun < 0.05) && (aiRef != null))
+        AI aiRef = col.gameObject.GetComponent<AI>();
+        if (aiRef != null)
         {
             aiRef.HP -= Player.damage;
             hitStun = Player.attackSpeed;
+            Debug.Log("Die Orc");
         }
         
     }

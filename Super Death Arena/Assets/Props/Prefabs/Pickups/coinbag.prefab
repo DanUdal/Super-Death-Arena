@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4901931351829356257}
   - component: {fileID: 1620458870892306188}
   - component: {fileID: 2935441736056971512}
+  - component: {fileID: 7853403309059850232}
   m_Layer: 0
   m_Name: coinbag
   m_TagString: Untagged
@@ -109,3 +110,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.44575125, y: 0.64793193, z: 0.44410223}
   m_Center: {x: 0.005142756, y: 0.06847833, z: -0.0044544116}
+--- !u!114 &7853403309059850232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4901931351827087393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b10c6a22d916fce4ab5d21447e17a68a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experienceGain: 10

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponHitbox : MonoBehaviour
 {
-    public int damage = 5;
+    public int damage = 20;
     public float attackSpeed = 0.2f;
     // Start is called before the first frame update
     void Start()
@@ -20,9 +20,11 @@ public class WeaponHitbox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        Player playerRef = other.gameObject.GetComponent<Player>();
+        if (playerRef != null)
         {
             Player.health -= damage;
+            Debug.Log("Player hit");
         }
     }
 }
