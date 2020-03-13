@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public static float speed = 0.2f;
+    [SerializeField] float speed = 0.5f;
     float xMove;
     float yMove;
     CharacterController character;
@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     public bool dead;
     public float health = 100;
     public float maxHealth = 100;
-    public Weapon weapon;
 
 
     public Animator animCont;
@@ -23,23 +22,20 @@ public class PlayerMovement : MonoBehaviour
         xMove = 0.0f;
         yMove = 0.0f;
         character = gameObject.GetComponent<CharacterController>();
-
-        weapon.gameObject.GetComponent<BoxCollider>().enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        dead = health <= 0;
+        dead = (health / maxHealth) <= 0;
         animCont.SetBool("Dead", dead);
         xMove = Input.GetAxis("Horizontal");
         yMove = Input.GetAxis("Vertical");
         Vector3 velocity = new Vector3(xMove, 0.0f, yMove) * speed;
         animCont.SetFloat("Blend", velocity.magnitude);
         character.Move(velocity);
-        weapon.gameObject.GetComponent<BoxCollider>().enabled = animCont.GetBool("Attacking");
 
-
+        
 
 
 
@@ -57,11 +53,6 @@ public class PlayerMovement : MonoBehaviour
             animCont.SetBool("Attacking", false);
             animCont.SetBool("Blocking", true);
 
-        }
-
-        if (Input.GetKeyDown(KeyCode.Joystick1Button7))
-        {
-            //open pause menu with open scene
         }
 
     }
