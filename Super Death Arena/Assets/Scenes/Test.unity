@@ -264,7 +264,9 @@ MonoBehaviour:
   playerRef: {fileID: 2026364930}
   agent: {fileID: 1062046582}
   HP: 1
+  speed: 0.2
   dead: 0
+  experienceOrb: {fileID: 0}
   attackThreshold: 2.5
   destination: {x: 0, y: 0, z: 0}
 --- !u!95 &1062046580 stripped

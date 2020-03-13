@@ -39,8 +39,10 @@ public class PlayerMovement : MonoBehaviour
         character.Move(velocity);
         weapon.gameObject.GetComponent<BoxCollider>().enabled = animCont.GetBool("Attacking");
 
-
-
+        if (velocity != new Vector3(0, 0, 0))
+        {
+            gameObject.transform.rotation = Quaternion.LookRotation(velocity);
+        }
 
 
         // This is for testing purposes. Could easily substitute the actual controllers later
@@ -59,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Joystick1Button7))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             //open pause menu with open scene
         }
