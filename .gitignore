@@ -1,54 +1,9 @@
-# =============== #
-# Unity generated #
-# =============== #
-[Tt]emp/
-[Oo]bj/
-[Bb]uild
-/[Bb]uilds/
-/[Ll]ibrary/
-sysinfo.txt
-*.stackdump
-/Assets/AssetStoreTools*
-*.apk
-*.unitypackage
- 
-# ===================================== #
-# Visual Studio / MonoDevelop generated #
-# ===================================== #
-[Ee]xported[Oo]bj/
-.vs/
-/*.userprefs
-/*.csproj
-/*.pidb
-*.pidb.meta
-/*.suo
-/*.sln*
-/*.user
-/*.unityproj
-/*.booproj
-.consulo/
-/*.tmp
-/*.svd
- 
-# ============ #
-# OS generated #
-# ============ #
-.DS_Store*
-._*
-.Spotlight-V100
-.Trashes
-Icon?
-ehthumbs.db
-[Tt]humbs.db
-[Dd]esktop.ini
-Corridor/Library/ShaderCache/
-Corridor/Library/metadata/
-*.txt
-/Super Death Arena/Library/*
-/Super Death Arena/Library*
-/Super Death Arena/Library**
-\Super Death Arena\Library*
-\Super Death Arena\Library**
-\Super Death Arena\Library\*
-Super Death Arena/Library/assetDatabase3
-Super Death Arena/Library/assetDatabase3
+Super Death Arena/Library/
+Super Death Arena/.vs/Super Death Arena/v15/Server/sqlite3/db.lock
+Super Death Arena/Library/CurrentLayout.dwlt
+Super Death Arena/Library/metadata/19/1905344c3f115924a903a66bba9595da
+Super Death Arena/Library/metadata/19/1905344c3f115924a903a66bba9595da.info
+Super Death Arena/Library/shadercompiler-UnityShaderCompiler.exe0.log
+Super Death Arena/Library/metadata/19/1905344c3f115924a903a66bba9595da
+Super Death Arena/Library/metadata/19/1905344c3f115924a903a66bba9595da.info
+*.info
