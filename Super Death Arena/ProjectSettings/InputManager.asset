@@ -198,7 +198,7 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Fire2
+    m_Name: AimingX
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -211,10 +211,10 @@ InputManager:
     snap: 0
     invert: 0
     type: 0
-    axis: 0
+    axis: 2
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Fire3
+    m_Name: AimingY
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -227,7 +227,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 0
-    axis: 0
+    axis: 3
     joyNum: 0
   - serializedVersion: 3
     m_Name: Jump
