@@ -23,10 +23,10 @@ public class PianoMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        AI aiRef = other.gameObject.GetComponent<AI>();
+        if (aiRef != null)
         {
-            EnemyCollider enemy = other.gameObject.GetComponent<EnemyCollider>();
-            enemy.takeDamage(damage); //change value to whatever you want the damage to be
+            aiRef.HP -= damage; //change value to whatever you want the damage to be
         }
         //perform destruction animation
         Destroy(gameObject);

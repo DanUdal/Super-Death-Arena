@@ -58,5 +58,12 @@ public class AI : MonoBehaviour
         weapon.attackSpeed *= bonusAttackSpeed;
         weapon.damage += bonusDamage;
     }
+
+    public IEnumerator slowEnemy(float slowPercent, float timeDelay)
+    {
+        speed *= slowPercent;
+        yield return new WaitForSeconds(timeDelay);
+        speed /= slowPercent;
+    }
 }
 

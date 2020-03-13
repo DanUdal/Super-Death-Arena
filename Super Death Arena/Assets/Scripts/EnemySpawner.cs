@@ -16,6 +16,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float attackSpeedMult = 1.1f; //do not make less than 1
     [SerializeField] int damageIncrease = 1;
     [SerializeField] int healthIncrease = 1;
+    [SerializeField] BattleMusic battleMusic;
+    [SerializeField] BattleMusic ambience;
+    [SerializeField] float musicFade;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +30,10 @@ public class EnemySpawner : MonoBehaviour
     {
         if (enemies.Count == 0)
         {
+            StartCoroutine(battleMusic.fadeOut(musicFade));
+            StartCoroutine(this.playWaveEnd(musicFade, ambience));
             //instantiate some next wave button that calls the spawn enemies function when clicked
+            this.waveEnd();
         }
     }
 
@@ -42,6 +48,8 @@ public class EnemySpawner : MonoBehaviour
             collider = currentEnemy.GetComponent<AI>();
             collider.increaseStats(attackSpeed, damage, health, speed);
         }
+        StartCoroutine(ambience.fadeOut(musicFade));
+        StartCoroutine(this.playWaveEnd(musicFade, battleMusic));
     }
 
     public void waveEnd()
@@ -51,5 +59,11 @@ public class EnemySpawner : MonoBehaviour
         health += healthIncrease;
         damage += damageIncrease;
         number++;
+    }
+
+    IEnumerator playWaveEnd(float delay, BattleMusic track)
+    {
+        yield return new WaitForSeconds(delay);
+        track.play();
     }
 }

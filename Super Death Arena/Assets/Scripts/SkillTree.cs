@@ -13,6 +13,8 @@ public class SkillTree : MonoBehaviour
     public static UnityEvent ability3;
     [SerializeField] GameObject target;
     [SerializeField] GameObject piano;
+    [SerializeField] GameObject coin;
+    [SerializeField] GameObject player;
 
     void Start()
     {
@@ -28,6 +30,7 @@ public class SkillTree : MonoBehaviour
         {
             ability3 = new UnityEvent();
         }
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -51,5 +54,10 @@ public class SkillTree : MonoBehaviour
     {
         Instantiate(target, new Vector3(0f, 0f, 0f), Quaternion.identity);
         Instantiate(piano, new Vector3(0f, 0f, 0f), Quaternion.identity);
+    }
+
+    public void coinToss()
+    {
+        Instantiate(coin, player.transform);
     }
 }

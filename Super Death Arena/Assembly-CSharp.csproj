@@ -63,7 +63,8 @@
     <Compile Include="Assets\Scripts\AbilityButton.cs" />
     <Compile Include="Assets\Scripts\AbilitySelector.cs" />
     <Compile Include="Assets\Scripts\AI.cs" />
-    <Compile Include="Assets\Scripts\EnemyCollider.cs" />
+    <Compile Include="Assets\Scripts\BattleMusic.cs" />
+    <Compile Include="Assets\Scripts\CoinToss.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\ExperienceOrb.cs" />
     <Compile Include="Assets\Scripts\PianoMove.cs" />
